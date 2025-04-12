@@ -1,0 +1,7 @@
+-- Step 1: Join this SQL Server instance to the Availability Group
+ALTER AVAILABILITY GROUP [YourAGName] JOIN;
+GO
+
+-- Step 2: Grant permission for automatic seeding (required for AG to create databases)
+ALTER AVAILABILITY GROUP [YourAGName] GRANT CREATE ANY DATABASE;
+GO
